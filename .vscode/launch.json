@@ -17,6 +17,24 @@
             "interface": "swd",
             "runToMain": true,
             "svdFile": "${workspaceRoot}/tools/STM32L4x3.svd",
+            "swoConfig":{
+                "enabled": true,
+                "cpuFrequency": 4000000,
+                "swoFrequency": 4000000,
+                "source": "probe",
+                "decoders": [
+                    {
+                        "label": "ITM port 0 output",
+                        "type": "console",
+                        "port": 0,
+                        "showOnStartup": true,
+                        "encoding": "ascii"
+                        
+                    }
+                ]
+
+            }
+
         }
     ]
 }

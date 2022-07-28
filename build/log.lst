@@ -1,0 +1,177 @@
+ARM GAS  C:\Users\Bunyamin\AppData\Local\Temp\cc81g2on.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"log.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.rodata.Log_PrintByteArray.str1.4,"aMS",%progbits,1
+  20              		.align	2
+  21              	.LC0:
+  22 0000 25303278 		.ascii	"%02x \000"
+  22      2000
+  23 0006 0000     		.align	2
+  24              	.LC1:
+  25 0008 0A00     		.ascii	"\012\000"
+  26              		.section	.text.Log_PrintByteArray,"ax",%progbits
+  27              		.align	1
+  28              		.global	Log_PrintByteArray
+  29              		.syntax unified
+  30              		.thumb
+  31              		.thumb_func
+  33              	Log_PrintByteArray:
+  34              	.LVL0:
+  35              	.LFB0:
+  36              		.file 1 "utils/log.c"
+   1:utils/log.c   **** /************************************************************************
+   2:utils/log.c   ****  *
+   3:utils/log.c   **** * FILENAME: 	  log.c
+   4:utils/log.c   **** * DATE: 		    16.04.2022
+   5:utils/log.c   **** * DESCRIPTION: 	Logging module
+   6:utils/log.c   **** * AUTHOR: 		  Embedded Systems Adam Bodurka
+   7:utils/log.c   **** *
+   8:utils/log.c   **** ************************************************************************/
+   9:utils/log.c   **** 
+  10:utils/log.c   **** /************************************************************************
+  11:utils/log.c   ****  *
+  12:utils/log.c   ****  * INCLUDES
+  13:utils/log.c   ****  *
+  14:utils/log.c   **** ************************************************************************/
+  15:utils/log.c   **** #include <stdint.h>
+  16:utils/log.c   **** #include "SEGGER_RTT.h"
+  17:utils/log.c   **** #include "log.h"
+  18:utils/log.c   **** /************************************************************************
+  19:utils/log.c   ****  *
+  20:utils/log.c   ****  * DEFINES AND MACROS
+  21:utils/log.c   ****  *
+ARM GAS  C:\Users\Bunyamin\AppData\Local\Temp\cc81g2on.s 			page 2
+
+
+  22:utils/log.c   **** ************************************************************************/
+  23:utils/log.c   **** 
+  24:utils/log.c   **** 
+  25:utils/log.c   **** /************************************************************************
+  26:utils/log.c   ****  *
+  27:utils/log.c   ****  * STATIC VARIABLES
+  28:utils/log.c   ****  *
+  29:utils/log.c   **** ************************************************************************/
+  30:utils/log.c   **** 
+  31:utils/log.c   **** 
+  32:utils/log.c   **** /************************************************************************
+  33:utils/log.c   ****  *
+  34:utils/log.c   ****  * STATIC FUNCTIONS DECLARATIONS
+  35:utils/log.c   ****  *
+  36:utils/log.c   **** ************************************************************************/
+  37:utils/log.c   **** 
+  38:utils/log.c   **** /************************************************************************
+  39:utils/log.c   ****  *
+  40:utils/log.c   ****  * FUNCTIONS
+  41:utils/log.c   ****  *
+  42:utils/log.c   **** ************************************************************************/
+  43:utils/log.c   **** 
+  44:utils/log.c   **** 
+  45:utils/log.c   **** /************************************************************************
+  46:utils/log.c   **** *
+  47:utils/log.c   **** * FUNCTION: 	Log_PrintByteArray
+  48:utils/log.c   **** *
+  49:utils/log.c   **** ************************************************************************/
+  50:utils/log.c   **** void Log_PrintByteArray(uint8_t *buf, uint32_t len)
+  51:utils/log.c   **** {
+  37              		.loc 1 51 1 view -0
+  38              		.cfi_startproc
+  39              		@ args = 0, pretend = 0, frame = 0
+  40              		@ frame_needed = 0, uses_anonymous_args = 0
+  41              		.loc 1 51 1 is_stmt 0 view .LVU1
+  42 0000 38B5     		push	{r3, r4, r5, lr}
+  43              	.LCFI0:
+  44              		.cfi_def_cfa_offset 16
+  45              		.cfi_offset 3, -16
+  46              		.cfi_offset 4, -12
+  47              		.cfi_offset 5, -8
+  48              		.cfi_offset 14, -4
+  49 0002 0446     		mov	r4, r0
+  52:utils/log.c   ****   while (len--)
+  50              		.loc 1 52 3 is_stmt 1 view .LVU2
+  51              		.loc 1 52 9 is_stmt 0 view .LVU3
+  52 0004 06E0     		b	.L2
+  53              	.LVL1:
+  54              	.L3:
+  53:utils/log.c   ****   {
+  54:utils/log.c   ****     LOG_RAW("%02x ", *buf++);
+  55              		.loc 1 54 5 is_stmt 1 view .LVU4
+  56              		.loc 1 54 5 is_stmt 0 view .LVU5
+  57 0006 14F8012B 		ldrb	r2, [r4], #1	@ zero_extendqisi2
+  58              	.LVL2:
+  59              		.loc 1 54 5 view .LVU6
+  60 000a 0649     		ldr	r1, .L5
+ARM GAS  C:\Users\Bunyamin\AppData\Local\Temp\cc81g2on.s 			page 3
+
+
+  61 000c 0020     		movs	r0, #0
+  62 000e FFF7FEFF 		bl	SEGGER_RTT_printf
+  63              	.LVL3:
+  52:utils/log.c   ****   while (len--)
+  64              		.loc 1 52 13 view .LVU7
+  65 0012 2946     		mov	r1, r5
+  66              	.LVL4:
+  67              	.L2:
+  52:utils/log.c   ****   while (len--)
+  68              		.loc 1 52 10 is_stmt 1 view .LVU8
+  52:utils/log.c   ****   while (len--)
+  69              		.loc 1 52 13 is_stmt 0 view .LVU9
+  70 0014 4D1E     		subs	r5, r1, #1
+  71              	.LVL5:
+  52:utils/log.c   ****   while (len--)
+  72              		.loc 1 52 10 view .LVU10
+  73 0016 0029     		cmp	r1, #0
+  74 0018 F5D1     		bne	.L3
+  55:utils/log.c   ****   }
+  56:utils/log.c   ****   LOG_RAW("\n");
+  75              		.loc 1 56 3 is_stmt 1 view .LVU11
+  76 001a 0349     		ldr	r1, .L5+4
+  77 001c 0020     		movs	r0, #0
+  78 001e FFF7FEFF 		bl	SEGGER_RTT_printf
+  79              	.LVL6:
+  57:utils/log.c   **** }
+  80              		.loc 1 57 1 is_stmt 0 view .LVU12
+  81 0022 38BD     		pop	{r3, r4, r5, pc}
+  82              	.LVL7:
+  83              	.L6:
+  84              		.loc 1 57 1 view .LVU13
+  85              		.align	2
+  86              	.L5:
+  87 0024 00000000 		.word	.LC0
+  88 0028 08000000 		.word	.LC1
+  89              		.cfi_endproc
+  90              	.LFE0:
+  92              		.text
+  93              	.Letext0:
+  94              		.file 2 "c:\\dev\\tool\\gcc-arm-11.2-2022.02-mingw-w64-i686-arm-none-eabi\\arm-none-eabi\\include\
+  95              		.file 3 "c:\\dev\\tool\\gcc-arm-11.2-2022.02-mingw-w64-i686-arm-none-eabi\\arm-none-eabi\\include\
+  96              		.file 4 "Middlewares/Third_Party/SEGGER/SEGGER_RTT.h"
+ARM GAS  C:\Users\Bunyamin\AppData\Local\Temp\cc81g2on.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 log.c
+C:\Users\Bunyamin\AppData\Local\Temp\cc81g2on.s:20     .rodata.Log_PrintByteArray.str1.4:00000000 $d
+C:\Users\Bunyamin\AppData\Local\Temp\cc81g2on.s:27     .text.Log_PrintByteArray:00000000 $t
+C:\Users\Bunyamin\AppData\Local\Temp\cc81g2on.s:33     .text.Log_PrintByteArray:00000000 Log_PrintByteArray
+C:\Users\Bunyamin\AppData\Local\Temp\cc81g2on.s:87     .text.Log_PrintByteArray:00000024 $d
+
+UNDEFINED SYMBOLS
+SEGGER_RTT_printf

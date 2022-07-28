@@ -1,9 +1,12 @@
 /* USER CODE BEGIN Header */
-/**
-  ******************************************************************************
-  * @file           : main.c
-  * @brief          : Main program body
-  ******************************************************************************
+/************************************************************************
+*
+* FILENAME: 	  main.c
+* DATE: 		    28.07.2022
+* DESCRIPTION: 	Main application entry
+* AUTHOR: 		  Embedded Systems Bunyamin Senel
+*
+************************************************************************
   * @attention
   *
   * Copyright (c) 2022 STMicroelectronics.
