@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Bunyamin\AppData\Local\Temp\ccwLdYTO.s 			page 1
+ARM GAS  C:\Users\Bunyamin\AppData\Local\Temp\ccKlXxSD.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -12,7 +12,7 @@ ARM GAS  C:\Users\Bunyamin\AppData\Local\Temp\ccwLdYTO.s 			page 1
    9              		.eabi_attribute 24, 1
   10              		.eabi_attribute 25, 1
   11              		.eabi_attribute 26, 1
-  12              		.eabi_attribute 30, 1
+  12              		.eabi_attribute 30, 6
   13              		.eabi_attribute 34, 1
   14              		.eabi_attribute 18, 4
   15              		.file	"croutine.c"
@@ -20,10 +20,27 @@ ARM GAS  C:\Users\Bunyamin\AppData\Local\Temp\ccwLdYTO.s 			page 1
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
   19              	.Letext0:
-ARM GAS  C:\Users\Bunyamin\AppData\Local\Temp\ccwLdYTO.s 			page 2
+ARM GAS  C:\Users\Bunyamin\AppData\Local\Temp\ccKlXxSD.s 			page 2
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 croutine.c
+                           .group:00000000 wm4.0.adf14caa46e67022f385f91b18884ae8
+                           .group:00000000 wm4.stddef.h.39.144cf5ddcd53cbfdac30259dc1a6c87f
+                           .group:00000000 wm4._newlib_version.h.4.bfdf54b0af045d4a71376ae00f63a22c
+                           .group:00000000 wm4.features.h.33.318b64d71e0957639cfb30f1db1f7ec8
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.48bafbb683905c4daa4565a85aeeb264
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.FreeRTOSConfig.h.32.5314d66ec2de84b02aa94058238983ac
+                           .group:00000000 wm4.projdefs.h.29.3472c8470d131a5f474bc7437ea94609
+                           .group:00000000 wm4.portmacro.h.30.ebb5f3ce711e1dad21b3172c9bc8e19f
+                           .group:00000000 wm4.portable.h.64.742f2ce568820e866a7b541b4c77966f
+                           .group:00000000 wm4.mpu_wrappers.h.29.4f9aea82ee68d943d141825e5294de63
+                           .group:00000000 wm4.FreeRTOS.h.66.fce9f915b49415550a89f4c8aa907062
+                           .group:00000000 wm4.list.h.61.5c5a38f6bc6687eed6d893e57dabd8e6
+                           .group:00000000 wm4.task.h.46.9fb92b2c1a30a52e436f6063552b709b
+                           .group:00000000 wm4.croutine.h.204.150a0dfb05d2a0db2892994b7245b267
 
 NO UNDEFINED SYMBOLS

@@ -19,7 +19,7 @@
             "svdFile": "${workspaceRoot}/tools/STM32L4x3.svd",
             "swoConfig":{
                 "enabled": true,
-                "cpuFrequency": 4000000,
+                "cpuFrequency": 80000000,
                 "swoFrequency": 4000000,
                 "source": "probe",
                 "decoders": [
