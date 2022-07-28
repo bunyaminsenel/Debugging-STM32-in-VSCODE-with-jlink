@@ -80,7 +80,7 @@ void StartDefaultTask(void *argument);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-  LOG_INFO("test-data");
+  LOG_INFO("test");
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
